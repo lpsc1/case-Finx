@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "medico": {
+                "nome": "Afonso Silva"
+            },
+            "paciente": {
+                "nome": "Gustavo Santos",
+                "dataNascimento": "2023-08-21"
+            },
+            "dataCriacao": "2024-09-20T12:00:00Z"
+        },
+        {
+            "id": 2,
+            "medico": {
+                "nome": "Fernando Santos"
+            },
+            "paciente": {
+                "nome": "Jurandir Santos",
+                "dataNascimento": "1999-08-21"
+            },
+            "dataCriacao": "2024-09-20T12:00:01Z"
+        }
+    ]
+}
