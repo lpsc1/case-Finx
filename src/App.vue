@@ -2,17 +2,29 @@
 import { ref } from "vue";
 import Filter from "./components/Filter.vue";
 import TheWelcome from "./components/TheWelcome.vue";
+import { ApiService } from "./service/index";
+
+const schedulingData = ref(null)
+
+async function searchData(doctor, client) {
+  console.log("doctor", doctor);
+  console.log("client", client);
+  ApiService.scheduling.getAll(doctor, client).then((res) => {
+    schedulingData.value = res
+  });
+}
 </script>
 
 <template>
   <header>
     <h1>Solicitações cirúrgicas</h1>
     <div>
-      <Filter />
+      <Filter :onSearch="searchData" />
     </div>
   </header>
 
-  <main></main>
+  <main>
+  </main>
 </template>
 
 
