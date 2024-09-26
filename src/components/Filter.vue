@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 defineProps({
   onSearch: {
-     type: Function,
+    type: Function,
   },
 });
 const doctor = ref("");
@@ -12,7 +12,7 @@ const client = ref("");
 
 <template>
   <div class="filterContainer">
-    <h3 class="flexBox title">Se quiser, filtre por:</h3>
+    <h3 class="flexBox title">Filtrar por:</h3>
     <div class="flexBox inputs">
       <div class="flexBox input-group">
         <p>Médico:</p>
@@ -24,7 +24,11 @@ const client = ref("");
       </div>
     </div>
     <div class="flexBox search-button">
-      <button @click="onSearch(doctor.trim(), client.trim())">Pesquisar</button>
+      <button
+        @click="onSearch({ doctor: doctor.trim(), client: client.trim() })"
+      >
+        Pesquisar
+      </button>
     </div>
   </div>
 </template>
@@ -35,27 +39,6 @@ const client = ref("");
   border-radius: 6px;
   border: 1px solid var(--color-text);
   font-size: 16px;
-}
-
-input {
-  border: 1px solid var(--color-text);
-  border-radius: 6px;
-  color: var(--color-text);
-  background: transparent;
-  padding: 0.3rem 1rem;
-  min-width: 200px;
-}
-
-input::placeholder {
-  color: var(--color-text);
-  opacity: .6;
-}
-
-input:focus {
-  outline: none;
-  border: 2px solid var(--color-text);
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .flexBox {
