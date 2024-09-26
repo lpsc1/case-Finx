@@ -120,6 +120,11 @@ header h1 {
   padding: 1rem;
 }
 
-@media (min-width: 1024px) {
+/* Mobile */
+@media (max-width: 700px) {
+  .orderByBox {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 </style>
