@@ -88,7 +88,9 @@ onBeforeMount(() => {
     perPage: routerQuery?.perPage ? parseInt(routerQuery?.perPage) : 10,
   };
   searchPayload.value.orderBy = routerQuery?.orderBy === "true" ? true : false;
-  fecthSchedulingData();
+  if (routerQuery && Object.keys(routerQuery).length > 0) {
+    fecthSchedulingData();
+  }
 });
 </script>
 
