@@ -86,11 +86,7 @@ function onChangePerPage(perPage) {
         :onChangePerPage="onChangePerPage"
       />
     </div>
-    <SchedulingList
-      :schedulingData="schedulingData"
-      :paginationProps="paginationProps"
-      :onChangePage="onChangePage"
-    />
+    <SchedulingList :schedulingData="schedulingData" />
   </main>
 </template>
 
