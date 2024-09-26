@@ -53,6 +53,10 @@ select {
 
 }
 
-@media (hover: hover) {}
-
-@media (min-width: 1024px) {}
+@media (max-width: 1024px) {
+  #app {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

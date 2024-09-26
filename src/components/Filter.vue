@@ -63,4 +63,11 @@ const client = ref("");
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .flexBox {
+    flex-direction: column;
+  }
+}
 </style>

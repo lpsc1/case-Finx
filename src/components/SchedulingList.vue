@@ -45,4 +45,12 @@ defineProps({
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+/* Mobile and Tablet and Smaller Desktop*/
+@media (max-width: 700px) and (max-width: 1120px) {
+  .listGrid {
+    height: auto;
+    overflow: hidden;
+  }
+}
 </style>

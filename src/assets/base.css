@@ -1,11 +1,10 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  /* --primary: #03a5ed; */
   --primary: #fff;
   --secondary: whiteSmoke;
-  /* --secondary: #9bcde2; */
-  /* --color-text: #FFFFFF */
   --color-text: #03a5ed
+    /* --primary: #03a5ed; */
+    /* --secondary: #9bcde2; */
+    /* --color-text: #FFFFFF */
 }
 
 *,
@@ -20,11 +19,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   color: var(--color-text);
-  background: linear-gradient(90deg, var(--primary), var(--secondary)) ;
-  /* background: white; */
-  /* transition:
-    color 0.5s,
-    background-color 0.5s; */
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   line-height: 1.6;
   font-family:
     Inter,
@@ -43,4 +38,11 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
