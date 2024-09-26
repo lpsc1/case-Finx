@@ -18,7 +18,7 @@ defineProps({
 <template>
   <div>
     Itens por página
-    <select v-model="paginationProps.perPage" @change="onChangePerPage">
+    <select v-model="paginationProps.perPage" @change="event => onChangePerPage(event.target.value)">
       <option value="5">5</option>
       <option value="10">10</option>
       <option value="15">15</option>
