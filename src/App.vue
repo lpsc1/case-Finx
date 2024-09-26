@@ -25,7 +25,7 @@ async function fecthSchedulingData() {
   ApiService.scheduling
     .getAll(paginationProps.value, searchPayload.value)
     .then((res) => {
-      schedulingData.value = res?.data;
+      schedulingData.value = res.data;
       paginationProps.value = {
         ...paginationProps.value,
         last: res.last,
@@ -48,7 +48,7 @@ function onSearchScheduling(props) {
 function onOrderBy(orderBy) {
   searchPayload.value = {
     ...searchPayload.value,
-    orderBy: orderBy,
+    orderBy,
   };
   fecthSchedulingData();
 }
@@ -60,10 +60,11 @@ function onChangePage(page) {
   };
   fecthSchedulingData();
 }
+
 function onChangePerPage(perPage) {
   paginationProps.value = {
     ...paginationProps.value,
-    perPage: perPage.target.value,
+    perPage,
   };
   fecthSchedulingData();
 }
