@@ -33,47 +33,29 @@ const client = ref("");
 .filterContainer {
   padding: 1rem 3rem;
   border-radius: 6px;
-  border: 2px solid white;
+  border: 1px solid var(--color-text);
   font-size: 16px;
 }
 
 input {
-  border: 1px solid white;
+  border: 1px solid var(--color-text);
   border-radius: 6px;
-  color: white;
+  color: var(--color-text);
   background: transparent;
   padding: 0.3rem 1rem;
   min-width: 200px;
 }
 
 input::placeholder {
-  color: white;
+  color: var(--color-text);
   opacity: .6;
 }
 
 input:focus {
   outline: none;
-  border: 2px solid white;
+  border: 2px solid var(--color-text);
   font-size: 14px;
   font-weight: 500;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  color: white;
-  background: transparent;
-  border: 2px solid white;
-  font-weight: 600;
-  border-radius: 6px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: scale(1.05);
-  transition: 0.1s linear;
-  color: #03a5ed;
-  background: white;
 }
 
 .flexBox {
